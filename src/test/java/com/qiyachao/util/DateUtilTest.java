@@ -12,7 +12,7 @@ public class DateUtilTest {
 
 	@Test
 	public void testGetDateByInitMonth() {
-		fail("Not yet implemented");
+		
 	}
 
 	@Test
