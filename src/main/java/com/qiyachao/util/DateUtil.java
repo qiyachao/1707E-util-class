@@ -17,7 +17,6 @@ public class DateUtil {
 		c.set(Calendar.HOUR_OF_DAY, 0);//0小时
 		c.set(Calendar.MINUTE, 0);//0分钟
 		c.set(Calendar.SECOND, 0);//0秒
-		
 		return c.getTime();//从日历类中获取日期
 	
 	}
@@ -28,7 +27,15 @@ public class DateUtil {
 	* 例如一个Date对象的值是2019-02-05 15:42:18，则返回的时间为2019-02-28 23:59:59
 	*/
 	public static Date getDateByFullMonth(Date src){
-		return src;
+		//获取当前系统日历类
+		Calendar c = Calendar.getInstance();
+		c.setTime(src);//用传入的日期构建日历类
+		
+		c.add(Calendar.MONTH, 1);//让月份加1
+		Date date = getDateByInitMonth(new Date());//调用上面的方法使其变成月初
+		c.setTime(date);//用月初的日期构建日历类
+		c.add(Calendar.SECOND, -1);//让日期减一秒
+		return c.getTime();
 	
 	}
 
