@@ -46,5 +46,24 @@ public class RandomUtil {
 		return str;
 	
 	}
-
+	
+	/**
+	 * 
+	 * @Title: randomNumber 
+	 * @Description: 返回指定长度数字
+	 * @param length
+	 * @return
+	 * @return: String
+	 */
+	public static String randomNumber (int length){
+		//声明1-9
+		String str ="1234567890";
+		String num="";
+		for (int i = 0; i < length; i++) {
+			num+=str.charAt(random(0, str.length()-1));
+		}
+		return num;
+		
+		
+	}
 }
