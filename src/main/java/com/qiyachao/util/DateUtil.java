@@ -47,8 +47,6 @@ public class DateUtil {
 			//结束的毫秒数
 			long l2 = d2.getTime();
 			
-			
-			
 			long l3= (long) ((Math.random() * (l2-l1 +1)) +l1);
 			
 			return new Date(l3);
