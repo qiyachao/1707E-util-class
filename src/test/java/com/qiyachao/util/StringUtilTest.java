@@ -35,5 +35,12 @@ public class StringUtilTest {
 			
 		}
 	}
-
+	
+	@Test
+	public void isPhone() {
+		boolean phone = StringUtil.isPhone("1354132235");
+		
+		System.out.println(phone);
+		
+	}
 }
